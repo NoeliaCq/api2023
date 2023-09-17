@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  models.docente
+  models.materia
     .create({ nombre: req.body.nombre, id_carrera: req.body.id_carrera })
     .then(materia => res.status(201).send({ id: materia.id }))
     .catch(error => {
